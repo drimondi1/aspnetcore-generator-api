@@ -15,7 +15,7 @@ COPY . .
 
 #test
 ENV TEAMCITY_PROJECT_NAME=fake
-RUN dotnet test tests/tests.csproj
+RUN dotnet test --verbosity normal tests/tests.csproj
 
 #publish
 RUN dotnet publish api/api.csproj -o /publish
